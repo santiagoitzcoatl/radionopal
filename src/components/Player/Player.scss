@@ -1,0 +1,28 @@
+@keyframes hover-animation {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.Player {
+    width: 60px;
+    border: 5px solid black;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+    svg {
+        left: 5px;
+        top: 1px;
+        position: relative;
+    }
+    &:hover {
+        animation: hover-animation 1s 0.08s infinite;
+    }
+}
+
