@@ -1,12 +1,7 @@
 .header {
     $self: &;
-
-    h1 { 
-        font-family: 'Circular Std Black';
-    }
-    h2 {
-        font-family: 'Circular Std Black';
-    }
+    position: sticky;
+    top: 0px;
     &__now-playing {
         span {
             font-family: 'Birch Std';
@@ -21,8 +16,6 @@
     }
 
     &__sticky {
-        position: relative;
-
         #{ $self }__col {
             display: flex;
             justify-content: space-between;
@@ -35,17 +28,7 @@
             }
 
         }
-    }
-/*
-    &--expanded {
-        #{ $self }__sticky {
-            background: none;
-            position: absolute;
-        }
-    }
-    */
-
-        
+    }   
     &--collapsed {
         min-height: 256px;
         @screen md { 
@@ -56,7 +39,7 @@
             animation: 
             bg-animation 3s ease infinite alternate, 
             collapse-animation 1s normal forwards;
-            position: fixed;
+            
             #{ $self }__col {
                 display: flex;
                 justify-content: space-between;
@@ -68,7 +51,6 @@
             }
         }
     }
-    
     @keyframes collapse-animation {
         0% {
           background-color: coral;

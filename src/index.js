@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Programacion from './pages/Programacion';
+import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 
@@ -23,13 +24,19 @@ const MainRouter = () => (
   <HashRouter>
     <Switch>
       <Route path="/programacion" render={() => <Programacion />} />
-      <Route path="/" render={() => <Programacion />} />
+      <Route path="/" render={() => <Home />} />
     </Switch>
   </HashRouter>
+);
+const AudioElement = () => (
+  <audio id="audio-player" type="audio/mpeg">
+    <source src={process.env.REACT_APP_STREAM_URL} />
+  </audio>
 );
 
 ReactDOM.render(
   <React.StrictMode>
+    <AudioElement />
     <MainRouter />
   </React.StrictMode>,
   document.getElementById('root')

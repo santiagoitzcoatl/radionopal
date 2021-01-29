@@ -5,7 +5,7 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <footer className="footer p-8 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-8 bg-black text-white">
+    <footer className="footer p-8 grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-8 bg-black text-white relative z-0">
       <div>
         <img
           src={nopalLogo}

@@ -16,9 +16,6 @@ const Player = () => {
 
   return (
     <button className={`player ${playing ? 'player--playing' : ''}`} onClick={handlePlayerClick}>
-      <audio id="audio-player" type="audio/mpeg">
-        <source src={process.env.REACT_APP_STREAM_URL} />
-      </audio>
       <div className="player__border" />
       <svg />
     </button>

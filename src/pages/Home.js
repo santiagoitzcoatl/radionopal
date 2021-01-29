@@ -9,8 +9,8 @@ const Home = () => {
     <div className="home">
       <Header />
       <PageTitle
-        title="Programación"
-        subtitle="Agosto-Septiembre"
+        title="Home"
+        subtitle="asdf"
         description="Quisque sodales nunc id justo eleifend ullamcorper. Maecenas malesuada feugiat neque, sit amet eleifend mauris consequat nec"
       />
       <Footer />
