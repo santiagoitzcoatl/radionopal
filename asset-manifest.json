@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/radionopal/static/css/main.a515873a.chunk.css",
-    "main.js": "/radionopal/static/js/main.7edfd096.chunk.js",
-    "runtime-main.js": "/radionopal/static/js/runtime-main.346b35ae.js",
-    "static/js/2.9486af26.chunk.js": "/radionopal/static/js/2.9486af26.chunk.js",
-    "static/js/3.b0e677d5.chunk.js": "/radionopal/static/js/3.b0e677d5.chunk.js",
+    "main.css": "/radionopal/static/css/main.2d52b837.chunk.css",
+    "main.js": "/radionopal/static/js/main.59b76104.chunk.js",
+    "runtime-main.js": "/radionopal/static/js/runtime-main.4e440a08.js",
+    "static/js/2.e4e0cbdb.chunk.js": "/radionopal/static/js/2.e4e0cbdb.chunk.js",
+    "static/js/3.4508c747.chunk.js": "/radionopal/static/js/3.4508c747.chunk.js",
     "index.html": "/radionopal/index.html",
-    "static/js/2.9486af26.chunk.js.LICENSE.txt": "/radionopal/static/js/2.9486af26.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/radionopal/static/media/CircularStd-Book.dd5f18bd.ttf"
+    "static/js/2.e4e0cbdb.chunk.js.LICENSE.txt": "/radionopal/static/js/2.e4e0cbdb.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/radionopal/static/media/CircularStd-Book.dd5f18bd.ttf",
+    "static/media/logo.07b0039b.svg": "/radionopal/static/media/logo.07b0039b.svg",
+    "static/media/mundo.9b8769ca.svg": "/radionopal/static/media/mundo.9b8769ca.svg",
+    "static/media/nopal.7f7e58c3.svg": "/radionopal/static/media/nopal.7f7e58c3.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.346b35ae.js",
-    "static/js/2.9486af26.chunk.js",
-    "static/css/main.a515873a.chunk.css",
-    "static/js/main.7edfd096.chunk.js"
+    "static/js/runtime-main.4e440a08.js",
+    "static/js/2.e4e0cbdb.chunk.js",
+    "static/css/main.2d52b837.chunk.css",
+    "static/js/main.59b76104.chunk.js"
   ]
 }
