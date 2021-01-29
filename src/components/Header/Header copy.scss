@@ -1,6 +1,6 @@
 .header {
     $self: &;
-
+    min-height: 370px;
     h1 { 
         font-family: 'Circular Std Black';
     }
@@ -12,72 +12,48 @@
             font-family: 'Birch Std';
         }
     }
-    &__search-box {
+    &__volume-slider {
         width: 100%;
     }
-
-    #{ $self }__nopal {
+    &__nopal {
         display: none;
     }
-
-    &__sticky {
-        position: relative;
-
-        #{ $self }__col {
-            display: flex;
-            justify-content: space-between;
-        }
-        @screen md {
-            position: absolute;
-   
-            #{ $self }__col {
-                display: block;
-            }
-
-        }
-    }
-/*
     &--expanded {
         #{ $self }__sticky {
             background: none;
             position: absolute;
         }
     }
-    */
-
-        
+    
     &--collapsed {
-        min-height: 256px;
-        @screen md { 
-            min-height: 0px;
-        }
-   
         #{ $self }__sticky {
+            position: fixed;
             animation: 
             bg-animation 3s ease infinite alternate, 
-            collapse-animation 1s normal forwards;
-            position: fixed;
+            collapse-animation 0.1s normal forwards;
+            #{ $self }__logo {
+                display: none;
+            }
             #{ $self }__col {
                 display: flex;
                 justify-content: space-between;
             }
             @screen md {
                 #{ $self }__nopal {
-                    display: inline;
+                    display: inline-block;
                 }
             }
         }
     }
-    
     @keyframes collapse-animation {
         0% {
-          background-color: coral;
+          background-color: rgba(128,128,128,1);
         }
         50% {
             background-color: rgba(128,128,128,1);
         }
         100% {
-          background-color: coral;
+          background-color: rgba(255,255,255,1);
         }
     }
 }

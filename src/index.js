@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Programacion from './pages/Programacion';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import './index.scss';
 
 console.log(
   '%c radionopal.com ',

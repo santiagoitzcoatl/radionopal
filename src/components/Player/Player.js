@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Play from './Play';
-import Pause from './Pause';
 import './Player.scss';
 
 const Player = () => {
@@ -17,16 +15,13 @@ const Player = () => {
   };
 
   return (
-    <div className="Player">
+    <button className={`player ${playing ? 'player--playing' : ''}`} onClick={handlePlayerClick}>
       <audio id="audio-player" type="audio/mpeg">
         <source src={process.env.REACT_APP_STREAM_URL} />
       </audio>
-      {playing ? (
-        <Pause onPlayerClick={handlePlayerClick} />
-      ) : (
-        <Play onPlayerClick={handlePlayerClick} />
-      )}
-    </div>
+      <div className="player__border" />
+      <svg />
+    </button>
   );
 };
 

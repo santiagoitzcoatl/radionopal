@@ -1,2 +1,9 @@
-.Footer {
+.footer {
+    &__nopal-img {
+        width: 157px;
+    }
+    &__mundo-img {
+        display: inline;
+        width: 15px;
+    }
 }

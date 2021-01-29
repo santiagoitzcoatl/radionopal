@@ -2,12 +2,14 @@ import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Shows from '../components/Shows/Shows';
+import PageTitle from '../components/PageTitle/PageTitle';
 import './Programacion.scss';
 
 const Programacion = () => {
   return (
-    <div className="Programacion">
-      <Header
+    <div className="programacion">
+      <Header />
+      <PageTitle
         title="Programación"
         subtitle="Agosto-Septiembre"
         description="Quisque sodales nunc id justo eleifend ullamcorper. Maecenas malesuada feugiat neque, sit amet eleifend mauris consequat nec"
