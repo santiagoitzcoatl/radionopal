@@ -1,8 +1,10 @@
 # Radio Nopal
 
+<img src="la-radio.jpg" alt="espacio Radio Nopal" width="600"/>
+
 Radio Nopal es una estación de radio colectiva por internet, localizada en la colonia San Rafael de la Ciudad de México.
 
-https://radionopal.com/
+https://www.radionopal.com/
 
 ### Desarrollo
 
