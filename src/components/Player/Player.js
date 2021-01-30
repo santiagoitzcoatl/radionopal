@@ -8,10 +8,18 @@ const Player = () => {
 
   const handlePlayerClick = () => {
     if (!playing) {
-      document.getElementById('audio-player').play();
+      try {
+        document.getElementById('audio-player').play();
+      } catch (e) {
+        return;
+      }
       dispatch({ type: 'playing', payload: true });
     } else {
-      document.getElementById('audio-player').pause();
+      try {
+        document.getElementById('audio-player').pause();
+      } catch (e) {
+        return;
+      }
       dispatch({ type: 'playing', payload: false });
     }
   };

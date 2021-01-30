@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 import SocialNetworksLinks from '../SocialNetworksLinks';
 import Player from '../Player/Player';
@@ -26,8 +27,14 @@ const Header = () => {
     <header className={`header top-0 sticky z-10 ${state.scroll ? 'header--collapsed' : ''}`}>
       <div className="header__container md:absolute p-8 w-full">
         <div className="grid grid-cols-8 gap-4">
-          <div className="header__col gap-8 flex md:block col-span-6 md:col-span-4 space-between items-start">
-            <img className="header__logo w-1/6 mb-6" src={radionopalLogo} alt="Radio Nopal logo" />
+          <div className="header__col gap-2 md:gap-8 flex md:block col-span-6 md:col-span-4 space-between items-start">
+            <Link to="/">
+              <img
+                className="header__logo w-1/6 mb-6"
+                src={radionopalLogo}
+                alt="Radio Nopal logo"
+              />
+            </Link>
             <img src={nopalLogo} className="header__nopal hidden w-1/5" alt="Radio Nopal logo" />
             <div className="inline-flex">
               <Player />

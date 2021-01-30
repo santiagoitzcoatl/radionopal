@@ -1,6 +1,6 @@
 import React from 'react';
+import { FaGlobe } from 'react-icons/fa';
 import nopalLogo from '../../assets/images/nopal.svg';
-import mundo from '../../assets/images/mundo.svg';
 import './Footer.scss';
 
 const Footer = () => {
@@ -13,8 +13,8 @@ const Footer = () => {
           alt="Radio Nopal logo"
         />
         <br />
-        Transmitiendo desde la colonia San Rafael en Ciudad de México para todo el
-        <img src={mundo} className="footer__mundo-img invert-svg ml-2" alt="mundo emoji" />
+        Transmitiendo desde la colonia San Rafael en Ciudad de México para todo el{' '}
+        <FaGlobe style={{ display: 'inline' }} />
       </div>
       <div>Radio Nopal Rosas Moreno 123—A Colonia San Rafael Ciudad de México C.P. 06470</div>
       <div>
