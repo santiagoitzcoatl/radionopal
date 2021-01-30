@@ -1,20 +1,32 @@
 .header {
     $self: &;
+
     &__links {
         a {
             margin-left: 10px;
         }
+    }
+    &__logo {
+        transition: width 1s;
+        transition-timing-function: ease;
+    }
+    &__container {
+        background-color: transparent;
+        box-shadow: 0px rgba(0, 0, 0, 0.2);
     }
     &--collapsed {
         min-height: 256px;
         #{ $self }__links {
             display: flex;
         }
+
+        #{ $self }__logo {
+            width: 10%;
+        }
    
         #{ $self }__container {
-            animation: 
-            bg-animation 3s ease infinite alternate, 
-            collapse-animation 1s normal forwards;
+            background-color: white;
+            box-shadow: 20px -15px 15px 20px rgba(0, 0, 0, 0.2);
         }
 
         #{ $self }__col {
@@ -29,17 +41,4 @@
         }
 
     }
-
-    @keyframes collapse-animation {
-        0% {
-          background-color: coral;
-        }
-        50% {
-            background-color: rgba(128,128,128,1);
-        }
-        100% {
-          background-color: coral;
-        }
-    }
-
 }
