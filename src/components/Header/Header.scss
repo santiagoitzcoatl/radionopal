@@ -1,35 +1,10 @@
 .header {
     $self: &;
-
-    &__now-playing {
-        span {
-            font-family: 'Birch Std';
-        }
-        span:first-child {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: transparent;
-            margin-right: 5px;
-            display: inline-block;
-            animation: live-animation 0.7s ease infinite alternate;
-            @keyframes live-animation {
-                0% {
-                    background-color: transparent;
-                }
-                100% {
-                    background-color: red;
-                }
-            }
-        }
-    }
-
     &__links {
         a {
             margin-left: 10px;
         }
     }
-
     &--collapsed {
         min-height: 256px;
         #{ $self }__links {

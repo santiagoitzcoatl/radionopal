@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import Programacion from './pages/Programacion';
-import Home from './pages/Home';
+import MainRouter from './MainRouter';
+import AudioElement from './components/AudioElement';
+import { StateProvider } from './store.js';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 
@@ -16,28 +16,16 @@ console.log(
   9px -9px 0 #FF6F61`
 );
 console.log(
-  '%c /* \n‍ https://github.com/pesinasiller/radionopal\n */',
+  '%c /* \n‍ https://github.com/Radio-Nopal/radionopal\n */',
   'font-size: 15px; color: blue;'
-);
-
-const MainRouter = () => (
-  <HashRouter>
-    <Switch>
-      <Route path="/programacion" render={() => <Programacion />} />
-      <Route path="/" render={() => <Home />} />
-    </Switch>
-  </HashRouter>
-);
-const AudioElement = () => (
-  <audio id="audio-player" type="audio/mpeg">
-    <source src={process.env.REACT_APP_STREAM_URL} />
-  </audio>
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <AudioElement />
-    <MainRouter />
+    <StateProvider>
+      <AudioElement />
+      <MainRouter />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

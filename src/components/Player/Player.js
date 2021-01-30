@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { store } from '../../store.js';
 import './Player.scss';
 
 const Player = () => {
-  const [playing, setPlaying] = useState(false);
+  const { state, dispatch } = useContext(store);
+  const { playing } = state;
 
   const handlePlayerClick = () => {
     if (!playing) {
       document.getElementById('audio-player').play();
-      setPlaying(true);
+      dispatch({ type: 'playing', payload: true });
     } else {
       document.getElementById('audio-player').pause();
-      setPlaying(false);
+      dispatch({ type: 'playing', payload: false });
     }
   };
 
