@@ -6,6 +6,29 @@
         span {
             font-family: 'Birch Std';
         }
+        span:first-child {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: transparent;
+            margin-right: 5px;
+            display: inline-block;
+            animation: live-animation 0.7s ease infinite alternate;
+            @keyframes live-animation {
+                0% {
+                    background-color: transparent;
+                }
+                100% {
+                    background-color: red;
+                }
+            }
+        }
+    }
+    &__links {
+        display: none;
+        a {
+            margin-left: 10px;
+        }
     }
     &__search-box {
         width: 100%;
@@ -15,7 +38,7 @@
         display: none;
     }
 
-    &__sticky {
+    &__container {
         #{ $self }__col {
             display: flex;
             justify-content: space-between;
@@ -34,8 +57,12 @@
         @screen md { 
             min-height: 0px;
         }
+
+        #{ $self }__links {
+            display: flex;
+        }
    
-        #{ $self }__sticky {
+        #{ $self }__container {
             animation: 
             bg-animation 3s ease infinite alternate, 
             collapse-animation 1s normal forwards;

@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaVolumeUp,
+  FaInstagram,
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaMixcloud
+} from 'react-icons/fa';
 import HamburgerMenu from 'react-hamburger-menu';
 import Player from '../Player/Player';
 import Menu from '../Menu/Menu';
 import radionopalLogo from '../../assets/images/logo.svg';
 import nopalLogo from '../../assets/images/nopal.svg';
-import mundo from '../../assets/images/mundo.svg';
 import './Header.scss';
 import './VolumeSlider.scss';
 
@@ -23,8 +30,8 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className={`header z-10 ${state.scroll ? 'header--collapsed' : 'header--expanded'}`}>
-        <div className="header__sticky p-8 w-full b-dashed">
+      <header className={`header z-10 ${state.scroll ? 'header--collapsed' : ''}`}>
+        <div className="header__container p-8 w-full">
           <div className="grid grid-cols-8 gap-4">
             <div className="header__col col-span-6 md:col-span-4 items-start">
               <img
@@ -37,6 +44,7 @@ const Header = () => {
                 <Player volume={state.volume} />
               </div>
               <div className="header__now-playing py-4 w-1/5">
+                <span></span>
                 Estás escuchando
                 <br />
                 <span>defensa personal</span>
@@ -46,10 +54,10 @@ const Header = () => {
               </div>
             </div>
             <div className="col-span-2 md:col-span-4 flex space-between ml-auto">
-              <div className="pt-1 flex items-start mr-4">
-                <img src={mundo} className="mr-2 w-4 float-left hidden md:block" alt="volumen" />
+              <div className="flex items-start mr-4">
+                <FaVolumeUp size="1.5em" className="mr-2 float-left hidden md:block" />
                 <input
-                  className="header__volume-slider hidden md:block"
+                  className="header__volume-slider mt-1 hidden md:block"
                   type="range"
                   min={0.0}
                   max={1}
@@ -68,6 +76,25 @@ const Header = () => {
                   name="search"
                   placeholder="buscar"
                 />
+                <div className="header__links relative -right-8 justify-end pt-4">
+                  <span>
+                    <Link className="mr-5" to="/">
+                      Apóyanos
+                    </Link>
+                  </span>
+                  <a href="https://www.instagram.com/radionopal/" rel="noreferrer" target="_blank">
+                    <FaInstagram size="1.5em" />
+                  </a>
+                  <a href="https://twitter.com/radio_nopal" rel="noreferrer" target="_blank">
+                    <FaTwitterSquare size="1.5em" />
+                  </a>
+                  <a href="https://www.facebook.com/RadioNopal" rel="noreferrer" target="_blank">
+                    <FaFacebookSquare size="1.5em" />
+                  </a>
+                  <a href="https://www.mixcloud.com/radionopal" rel="noreferrer" target="_blank">
+                    <FaMixcloud size="1.5em" />
+                  </a>
+                </div>
               </div>
               <div className="float-right mt-1 md:ml-4 relative">
                 <HamburgerMenu

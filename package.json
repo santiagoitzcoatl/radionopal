@@ -4,9 +4,9 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/pesinasiller/radionopal.git"
+    "url": "https://github.com/Radio-Nopal/radionopal.git"
   },
-  "homepage": "https://pesinasiller.github.io/radionopal/",
+  "homepage": "https://github.com/Radio-Nopal/radionopal",
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
@@ -19,6 +19,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hamburger-menu": "^1.2.1",
+    "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
