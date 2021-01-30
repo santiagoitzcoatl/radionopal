@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from '../Loader';
 import './Shows.scss';
 
 const Shows = () => {
@@ -13,18 +14,21 @@ const Shows = () => {
       });
   }, []);
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {data.map((item, key) => {
-        return (
-          <div key={key} className="show">
-            <h1 className="show__title text-4xl">{item.nombre}</h1>
-            <span className="show__host">Por: {item.host}</span>
-            <h2 className="show__description text-gray-400">{item.descripcion}</h2>
-            <img src={item.imagen[0].url} alt={item.descripcion} />
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {data.length === 0 && <Loader />}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {data.map((item, key) => {
+          return (
+            <div key={key} className="show">
+              <h1 className="show__title text-4xl">{item.nombre}</h1>
+              <span className="show__host">Por: {item.host}</span>
+              <h2 className="show__description text-gray-400">{item.descripcion}</h2>
+              <img src={item.imagen[0].url} alt={item.descripcion} />
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

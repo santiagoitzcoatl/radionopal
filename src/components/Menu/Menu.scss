@@ -1,6 +1,9 @@
 .menu {
     animation: background-color-animation 20s 0.08s infinite;
     transition: right 1s;
+    a:hover {
+        text-decoration: underline;
+    }
     &--hidden {
         right: -100vw;
     }

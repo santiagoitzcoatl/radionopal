@@ -28,7 +28,7 @@ const Header = () => {
       <div className="header__container md:absolute p-8 w-full">
         <div className="grid grid-cols-8 gap-4">
           <div className="header__col gap-2 md:gap-8 flex md:block col-span-6 md:col-span-4 space-between items-start">
-            <Link to="/">
+            <Link to="/" className="contents">
               <img
                 className="header__logo w-1/6 mb-6"
                 src={radionopalLogo}

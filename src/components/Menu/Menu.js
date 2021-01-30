@@ -15,8 +15,12 @@ const Menu = ({ showMenu }) => {
         <li>
           <Link to="/">Residencia</Link>
         </li>
-        <li>Educativa</li>
-        <li>Archivo</li>
+        <li>
+          <Link to="/">Educativa</Link>
+        </li>
+        <li>
+          <Link to="/">Archivo</Link>
+        </li>
       </ul>
     </div>
   );
